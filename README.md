@@ -8,6 +8,7 @@
 [![Status](https://img.shields.io/badge/Status-Active-success.svg)](#)
 
 ---
+live website: https://kel-254.github.io/AI-CAREER-GUIDE/
 
 ## 🧭 Overview
 
