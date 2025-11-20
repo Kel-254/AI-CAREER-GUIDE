@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Technology & Engineering</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 font-sans">
+
+  <!-- Header -->
+  <header class="bg-purple-600 text-white shadow-md py-6">
+    <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+      <h1 class="text-3xl font-bold">Technology & Engineering</h1>
+      <a href="dashboard.html" class="bg-white text-purple-600 px-4 py-2 rounded hover:bg-gray-100 transition">← Back to Dashboard</a>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-6 py-12 space-y-12">
+
+    <!-- Intro -->
+    <section class="bg-white rounded-2xl shadow-lg p-8">
+      <h2 class="text-2xl font-bold text-purple-600 mb-4">Overview</h2>
+      <p class="text-gray-700 leading-relaxed">
+        Build a career in software development, AI, data science, and emerging technologies. Learn to design, code, and innovate solutions that solve real-world problems.
+      </p>
+    </section>
+
+    <!-- Key Skills -->
+    <section>
+      <h2 class="text-2xl font-bold text-purple-600 mb-6">Key Skills & Focus Areas</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <!-- SOFTWARE DEVELOPMENT -->
+        <div class="bg-purple-50 rounded-xl shadow p-6 flex flex-col items-center text-center hover:shadow-2xl transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 mb-4 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-width="1.8" d="M4 4h16v16H4z"/>
+            <path stroke-width="1.8" d="M8 8l3 3-3 3m5 0h3"/>
+          </svg>
+          <h3 class="text-xl font-semibold mb-2 text-purple-700">Software Development</h3>
+          <p class="text-gray-700 text-sm">Design and build apps using modern programming languages.</p>
+        </div>
+
+        <!-- DATA SCIENCE / AI -->
+        <div class="bg-blue-50 rounded-xl shadow p-6 flex flex-col items-center text-center hover:shadow-2xl transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 mb-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <circle cx="12" cy="12" r="3" stroke-width="1.7"/>
+            <path stroke-width="1.7" d="M12 5v2m0 10v2m7-7h-2M7 12H5m10.5-5.5l-1.5 1.5M8 16l-1.5 1.5M16 16l1.5 1.5M8 8L6.5 6.5"/>
+          </svg>
+          <h3 class="text-xl font-semibold mb-2 text-blue-700">Data Science & AI</h3>
+          <p class="text-gray-700 text-sm">Analyze data, build machine learning models, and implement AI systems.</p>
+        </div>
+
+        <!-- ENGINEERING / HARDWARE -->
+        <div class="bg-green-50 rounded-xl shadow p-6 flex flex-col items-center text-center hover:shadow-2xl transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 mb-4 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <rect x="4" y="4" width="16" height="16" rx="2" stroke-width="1.8"/>
+            <path stroke-width="1.8" d="M9 9h6v6H9z"/>
+          </svg>
+          <h3 class="text-xl font-semibold mb-2 text-green-700">Engineering</h3>
+          <p class="text-gray-700 text-sm">Develop hardware, embedded systems, and innovative tech solutions.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Recommended Courses -->
+    <section>
+      <h2 class="text-2xl font-bold text-purple-600 mb-6">Recommended Courses</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition">
+          <h3 class="text-xl font-semibold mb-2 text-purple-700">Full-Stack Development</h3>
+          <p class="text-gray-700 text-sm mb-4">Master front-end and back-end technologies to build complete apps.</p>
+          <a href="technology-courses.html" class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 transition">View Course</a>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition">
+          <h3 class="text-xl font-semibold mb-2 text-blue-700">Data Science & AI</h3>
+          <p class="text-gray-700 text-sm mb-4">Learn Python, machine learning, analytics, and AI modeling.</p>
+          <a href="technology-courses.html" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">View Course</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Resources -->
+    <section>
+      <h2 class="text-2xl font-bold text-purple-600 mb-6">Resources</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition text-center">
+          <h3 class="font-semibold mb-2 text-purple-700">Coding Challenges</h3>
+          <p class="text-gray-700 text-sm mb-4">Practice your coding skills with real-world problems.</p>
+          <a href="coding-challenges.html" class="text-purple-600 hover:underline">Explore</a>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition text-center">
+          <h3 class="font-semibold mb-2 text-blue-700">AI Tutorials</h3>
+          <p class="text-gray-700 text-sm mb-4">Hands-on tutorials for AI and machine learning.</p>
+          <a href="ai-tutorials.html" class="text-blue-600 hover:underline">Explore</a>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition text-center">
+          <h3 class="font-semibold mb-2 text-green-700">Tech News</h3>
+          <p class="text-gray-700 text-sm mb-4">Stay updated with the latest technologies and innovations.</p>
+          <a href="tech-news.html" class="text-green-600 hover:underline">Explore</a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-gray-100 py-6 mt-12 text-center text-gray-600 text-sm">
+    &copy; 2025 AI Career Guide. All rights reserved.
+  </footer>
+
+</body>
+</html>

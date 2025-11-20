@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile - AI Career Guide</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+
+  <nav class="bg-blue-600 text-white shadow-md p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-xl font-bold">AI Career Guide</h1>
+      <a href="dashboard.html" class="bg-white text-blue-600 px-4 py-2 rounded hover:bg-gray-100 transition">Dashboard</a>
+    </div>
+  </nav>
+
+  <div class="container mx-auto mt-10 p-6 bg-white rounded-lg shadow-md max-w-4xl">
+    <h2 class="text-2xl font-bold mb-6 text-center">Complete Your Profile</h2>
+
+    <form id="profileForm" class="space-y-6">
+      <!-- Basic Info -->
+      <div>
+        <label class="block font-semibold mb-1">Full Name</label>
+        <input type="text" name="name" placeholder="John Doe" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+
+      <div>
+        <label class="block font-semibold mb-1">Email</label>
+        <input type="email" name="email" placeholder="example@mail.com" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+
+      <div>
+        <label class="block font-semibold mb-1">Profile Picture URL</label>
+        <input type="text" name="profilePic" placeholder="https://example.com/photo.jpg" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+
+      <!-- Education -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label class="block font-semibold mb-1">Highest Education Level</label>
+          <select name="education" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <option>High School</option>
+            <option>Bachelor</option>
+            <option>Masters</option>
+            <option>PhD</option>
+          </select>
+        </div>
+        <div>
+          <label class="block font-semibold mb-1">Field of Study</label>
+          <input type="text" name="fieldOfStudy" placeholder="Computer Science, Arts, Business..." class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+      </div>
+
+      <div>
+        <label class="block font-semibold mb-1">Certifications (comma separated)</label>
+        <input type="text" name="certifications" placeholder="AWS, Google Analytics, Photoshop..." class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+
+      <!-- Skills & Interests -->
+      <div>
+        <label class="block font-semibold mb-1">Skills (comma separated)</label>
+        <input type="text" name="skills" placeholder="Python, Marketing, Design..." class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+
+      <div>
+        <label class="block font-semibold mb-1">Interests (comma separated)</label>
+        <input type="text" name="interests" placeholder="Creativity, Technology, Healthcare..." class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+
+      <!-- Personality & Preferences -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label class="block font-semibold mb-1">Personality Traits</label>
+          <input type="text" name="personality" placeholder="Analytical, Creative, Extrovert..." class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+        <div>
+          <label class="block font-semibold mb-1">Preferred Work Environment</label>
+          <select name="workEnv" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <option>Remote</option>
+            <option>Office</option>
+            <option>Hybrid</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Experience & Goals -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label class="block font-semibold mb-1">Years of Experience</label>
+          <input type="number" name="experience" placeholder="0" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+        <div>
+          <label class="block font-semibold mb-1">Short-term Goal</label>
+          <input type="text" name="shortTermGoal" placeholder="Become a UX Designer" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+      </div>
+
+      <div>
+        <label class="block font-semibold mb-1">Long-term Goal</label>
+        <input type="text" name="longTermGoal" placeholder="Lead a design team at a tech company" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+
+      <div>
+        <label class="block font-semibold mb-1">Preferred Industries</label>
+        <input type="text" name="industries" placeholder="Technology, Arts, Business..." class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+
+      <!-- Submit -->
+      <div class="text-center">
+        <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">Save Profile</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById("profileForm");
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData.entries());
+      console.log("User Profile Data:", data);
+      alert("Profile saved! Check console for output.");
+      // Here you can send data to backend or AI model
+    });
+  </script>
+</body>
+</html>

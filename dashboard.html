@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Career Guide - Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 font-sans">
+
+  <!-- Navigation -->
+  <nav class="bg-blue-600 text-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold">AI Career Guide</h1>
+      <div class="space-x-4">
+        <button id="btnDashboard" class="text-white font-medium hover:underline">Dashboard</button>
+        <button id="btnProfile" class="text-white font-medium hover:underline">Profile</button>
+        <button id="btnAI" class="text-white font-medium hover:underline">AI Mentor</button>
+        <button id="btnLogout" class="bg-white text-blue-600 px-4 py-2 rounded hover:bg-gray-100 transition">Logout</button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mx-auto px-6 mt-6 flex flex-col lg:flex-row gap-6">
+
+    <!-- Main Content -->
+    <main id="dashboardSection" class="flex-1 space-y-12">
+
+      <!-- Dashboard Cards -->
+      <section id="career-cards" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+        <!-- Business Card -->
+        <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition p-6 flex flex-col justify-between">
+          <div class="flex items-center gap-4 mb-4">
+            <!-- Briefcase SVG -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 12v8m-6-8v8m12-8v8m-6-8V4m0 0H6a2 2 0 00-2 2v4h12V6a2 2 0 00-2-2h-6z" />
+            </svg>
+            <h4 class="font-semibold text-xl text-blue-600">Business & Entrepreneurship</h4>
+          </div>
+          <p class="text-gray-600 mb-4">Learn skills to manage, start, or grow a business, including leadership, finance, and marketing.</p>
+          <a href="business.html" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition text-center">Explore</a>
+        </div>
+
+        <!-- Healthcare Card -->
+        <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition p-6 flex flex-col justify-between">
+          <div class="flex items-center gap-4 mb-4">
+            <!-- Heartbeat SVG -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h4l2 4 4-8 2 4h4" />
+            </svg>
+            <h4 class="font-semibold text-xl text-green-600">Healthcare & Medicine</h4>
+          </div>
+          <p class="text-gray-600 mb-4">Explore careers in medicine, nursing, research, and health tech innovation.</p>
+          <a href="healthcare.html" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition text-center">Explore</a>
+        </div>
+
+        <!-- Creative Arts Card -->
+        <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition p-6 flex flex-col justify-between">
+          <div class="flex items-center gap-4 mb-4">
+            <!-- Paint Palette SVG -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-pink-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2a10 10 0 100 20 5 5 0 010-10 3 3 0 000-6z" />
+            </svg>
+            <h4 class="font-semibold text-xl text-pink-600">Creative Arts & Design</h4>
+          </div>
+          <p class="text-gray-600 mb-4">Careers in design, media, music, and digital content creation.</p>
+          <a href="creative.html" class="bg-pink-600 text-white px-4 py-2 rounded hover:bg-pink-700 transition text-center">Explore</a>
+        </div>
+
+        <!-- Technology Card -->
+        <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition p-6 flex flex-col justify-between">
+          <div class="flex items-center gap-4 mb-4">
+            <!-- Chip SVG -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4h16v16H4V4zM9 9h6v6H9V9z" />
+            </svg>
+            <h4 class="font-semibold text-xl text-purple-600">Technology & Engineering</h4>
+          </div>
+          <p class="text-gray-600 mb-4">Software development, AI, data science, and emerging tech careers.</p>
+          <a href="technology.html" class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 transition text-center">Explore</a>
+        </div>
+
+      </section>
+    </main>
+
+    <!-- Sidebar -->
+    <aside class="hidden lg:block lg:w-64 bg-white rounded-xl shadow-lg p-6 space-y-6">
+      <h3 class="text-xl font-bold mb-2 text-blue-700">Quick Tips</h3>
+      <ul class="list-disc list-inside text-gray-700 space-y-1">
+        <li>Update your profile regularly.</li>
+        <li>Explore multiple career paths.</li>
+        <li>Engage with the AI Mentor for guidance.</li>
+        <li>Track your short-term and long-term goals.</li>
+        <li>Upload a professional profile picture.</li>
+      </ul>
+      <div>
+        <h3 class="text-xl font-bold mb-2 text-blue-700">Resources</h3>
+        <ul class="space-y-1">
+          <li><a href="resume-tips.html" class="text-blue-600 hover:underline">Resume Tips</a></li>
+          <li><a href="interview-prep.html" class="text-blue-600 hover:underline">Interview Prep</a></li>
+          <li><a href="skill-development.html" class="text-blue-600 hover:underline">Skill Development</a></li>
+        </ul>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- Profile Section -->
+  <section id="profileSection" class="hidden fixed inset-0 bg-gray-50 z-50 overflow-auto p-8">
+    <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-2xl p-10 relative">
+      <button id="closeProfile" class="absolute top-4 right-4 bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">✕</button>
+      <h3 class="text-3xl font-bold mb-6 text-center text-blue-700">Your Profile</h3>
+      <div class="flex flex-col md:flex-row items-center gap-6 mb-8">
+        <div class="relative">
+          <img id="profilePreview" src="https://via.placeholder.com/150" alt="Profile Picture" class="w-36 h-36 rounded-full object-cover border-4 border-blue-300">
+          <label for="profileImage" class="absolute bottom-0 right-0 bg-blue-600 text-white p-2 rounded-full cursor-pointer hover:bg-blue-700 transition">✎</label>
+          <input type="file" id="profileImage" accept="image/*" class="hidden" onchange="previewImage(event)">
+        </div>
+        <form id="profileForm" class="flex-1 grid grid-cols-1 md:grid-cols-2 gap-4">
+          <input type="text" name="name" placeholder="Full Name" class="border rounded px-3 py-2">
+          <input type="email" name="email" placeholder="Email" class="border rounded px-3 py-2">
+          <input type="text" name="education" placeholder="Education" class="border rounded px-3 py-2">
+          <input type="text" name="field_of_study" placeholder="Field of Study" class="border rounded px-3 py-2">
+          <input type="text" name="skills" placeholder="Skills" class="border rounded px-3 py-2">
+          <input type="text" name="interests" placeholder="Interests" class="border rounded px-3 py-2">
+          <input type="text" name="experience" placeholder="Experience (years)" class="border rounded px-3 py-2">
+          <input type="text" name="short_term_goal" placeholder="Short-term Goal" class="border rounded px-3 py-2">
+          <input type="text" name="long_term_goal" placeholder="Long-term Goal" class="border rounded px-3 py-2">
+          <input type="text" name="industries" placeholder="Preferred Industries" class="border rounded px-3 py-2">
+          <div class="col-span-2 flex justify-end mt-4">
+            <button type="submit" class="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700 transition">Save Profile</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI Mentor Section -->
+  <section id="aiMentor" class="hidden fixed inset-0 bg-gray-50 z-50 overflow-auto p-8">
+    <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-2xl p-8 relative flex flex-col gap-6">
+      <button id="closeAI" class="absolute top-4 right-4 bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">✕</button>
+      <h3 class="text-3xl font-bold text-center text-blue-700">AI Career Mentor</h3>
+      <div id="chatBox" class="h-96 overflow-y-auto border rounded p-4 bg-gray-100"></div>
+      <form id="chatForm" class="flex gap-2">
+        <input type="text" id="userInput" placeholder="Ask about your career path..." class="flex-1 border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <button class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const btnProfile = document.getElementById("btnProfile");
+      const btnAI = document.getElementById("btnAI");
+      const btnDashboard = document.getElementById("btnDashboard");
+      const btnLogout = document.getElementById("btnLogout");
+      const closeProfile = document.getElementById("closeProfile");
+      const closeAI = document.getElementById("closeAI");
+      const careerCards = document.getElementById("career-cards");
+      const dashboardSection = document.getElementById("dashboardSection");
+      const profileSection = document.getElementById("profileSection");
+      const aiMentor = document.getElementById("aiMentor");
+      const profileForm = document.getElementById("profileForm");
+
+      // SPA navigation
+      btnProfile.onclick = () => {
+        careerCards.classList.add("hidden");
+        dashboardSection.classList.add("hidden");
+        profileSection.classList.remove("hidden");
+      };
+      btnAI.onclick = () => {
+        careerCards.classList.add("hidden");
+        dashboardSection.classList.add("hidden");
+        aiMentor.classList.remove("hidden");
+      };
+      btnDashboard.onclick = () => {
+        profileSection.classList.add("hidden");
+        aiMentor.classList.add("hidden");
+        careerCards.classList.remove("hidden");
+        dashboardSection.classList.remove("hidden");
+      };
+
+      closeProfile.onclick = () => profileSection.classList.add("hidden");
+      closeAI.onclick = () => aiMentor.classList.add("hidden");
+
+      // Profile image preview
+      window.previewImage = (event) => {
+        const reader = new FileReader();
+        reader.onload = () => document.getElementById("profilePreview").src = reader.result;
+        reader.readAsDataURL(event.target.files[0]);
+      };
+
+      // Profile form submit (localStorage mock)
+      profileForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const formData = new FormData(profileForm);
+        const values = Object.fromEntries(formData.entries());
+        localStorage.setItem("userProfile", JSON.stringify(values));
+        alert("Profile saved locally!");
+      });
+
+      // AI Mentor Chat
+chatForm.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const userInput = document.getElementById("userInput").value.trim();
+  if (!userInput) return;
+  addMessage("user", userInput);
+  document.getElementById("userInput").value = "";
+
+  try {
+    const profile = JSON.parse(localStorage.getItem("userProfile")) || {};
+
+    const res = await fetch("http://localhost:5000/mentor", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ question: userInput, profile }),
+    });
+
+    const data = await res.json();
+    const answer = data?.answer;
+    if (!answer) {
+      console.error("No answer returned from AI:", data);
+      addMessage("ai", "Sorry, no response generated by AI Mentor.");
+      return;
+    }
+    addMessage("ai", answer);
+
+  } catch (err) {
+    console.error("AI Mentor error:", err);
+    addMessage("ai", "Error: Unable to reach AI Mentor.");
+  }
+});
+  
+//logout
+      btnLogout.onclick = () => {
+        localStorage.removeItem("userProfile");
+        alert("Logged out!");
+        location.reload();
+      };
+    });
+  </script>
+
+</body>
+</html>

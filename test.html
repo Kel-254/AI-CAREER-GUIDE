@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Mentor Test</title>
+  <style>
+    body { font-family: sans-serif; margin: 2rem; background: #f0f4f8; }
+    #chatBox { border: 1px solid #ccc; background: #fff; padding: 1rem; height: 300px; overflow-y: auto; margin-bottom: 1rem; }
+    .user { text-align: right; color: white; background: #3b82f6; padding: 0.5rem 1rem; border-radius: 10px; margin: 0.2rem 0; display: inline-block; }
+    .ai { text-align: left; color: #1f2937; background: #e5e7eb; padding: 0.5rem 1rem; border-radius: 10px; margin: 0.2rem 0; display: inline-block; }
+  </style>
+</head>
+<body>
+
+<h1>AI Mentor Test Page</h1>
+
+<div id="chatBox"></div>
+
+<input type="text" id="question" placeholder="Ask a career question..." style="width: 80%; padding: 0.5rem;">
+<button id="sendBtn" style="padding: 0.5rem 1rem;">Send</button>
+
+<script>
+  const chatBox = document.getElementById('chatBox');
+  const questionInput = document.getElementById('question');
+  const sendBtn = document.getElementById('sendBtn');
+
+  function addMessage(sender, text) {
+    const div = document.createElement('div');
+    div.className = sender;
+    div.textContent = text;
+    chatBox.appendChild(div);
+    chatBox.scrollTop = chatBox.scrollHeight;
+  }
+
+  sendBtn.addEventListener('click', async () => {
+    const question = questionInput.value.trim();
+    if (!question) return;
+    addMessage('user', question);
+    questionInput.value = '';
+
+    try {
+      const response = await fetch('http://localhost:5000/mentor', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ question, profile: {} }) // profile can be empty for testing
+      });
+      const data = await response.json();
+      addMessage('ai', data.answer || "No response from AI");
+    } catch (err) {
+      console.error(err);
+      addMessage('ai', 'Error: Unable to connect to AI Mentor.');
+    }
+  });
+
+  questionInput.addEventListener('keypress', (e) => {
+    if(e.key === 'Enter') sendBtn.click();
+  });
+</script>
+
+</body>
+</html>
